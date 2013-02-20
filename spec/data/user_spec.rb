@@ -39,4 +39,19 @@ describe User do
   describe 'associations' do
   	it { should have_many(:surveys) }
   end
+
+  describe 'abilities' do
+    let(:user) { build_stubbed :user }
+
+    context 'active' do
+      let(:survey)   { build :survey, user: user }
+      let(:question) { build :question, survey: survey }
+
+      it 'should be able to manage its resources' do
+        user.should be_able_to(:manage, user)
+        user.should be_able_to(:manage, survey)
+        user.should be_able_to(:manage, question)
+      end
+    end
+  end
 end
