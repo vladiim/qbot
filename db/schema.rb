@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(:version => 20130220051949) do
   add_index "surveys", ["user_id"], :name => "index_surveys_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "username",          :null => false
-    t.string   "email",             :null => false
+    t.string   "username"
+    t.string   "email"
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
