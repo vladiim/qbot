@@ -16,8 +16,11 @@ group :assets do
   gem 'mustache'
   gem 'hogan_assets'
   gem 'haml_assets'
+  gem 'compass-rails'
+  gem 'compass-h5bp'
 end
 
+gem 'html5-rails'
 gem 'haml-rails'
 
 gem 'jquery-rails'

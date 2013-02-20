@@ -9,9 +9,9 @@ namespace 'test' do
     end
   end
 
-  desc 'database tests'
-  task :db do
-    test_files = Dir.glob("spec/db/*_spec.rb").each do |test_file|
+  desc 'data structure tests'
+  task :data do
+    test_files = Dir.glob("spec/data/*_spec.rb").each do |test_file|
       sh "ruby #{test_file}"
     end
   end

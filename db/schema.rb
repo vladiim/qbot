@@ -11,16 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220042559) do
+ActiveRecord::Schema.define(:version => 20130220051949) do
+
+  create_table "surveys", :force => true do |t|
+    t.string   "name"
+    t.integer  "order_number"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "surveys", ["user_id"], :name => "index_surveys_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "username",         :null => false
-    t.string   "email",            :null => false
+    t.string   "username",          :null => false
+    t.string   "email",             :null => false
     t.string   "crypted_password"
     t.string   "password_salt"
+    t.string   "persistence_token"
     t.string   "perishable_token"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   add_index "users", ["username"], :name => "index_users_on_username"

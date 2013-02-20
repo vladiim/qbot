@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require mustache
-//= require hogan.js
+//= require h5bp
 //= require bootstrap
-//= require_tree .
+

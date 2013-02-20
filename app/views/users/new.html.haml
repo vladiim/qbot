@@ -1,0 +1,9 @@
+%h1 Collaborate with your audience in real time
+
+= simple_form_for @user do |f|
+  = f.error_notification
+  = f.input :username
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.submit 'Sign Up For Free', class: 'btn btn-primary'

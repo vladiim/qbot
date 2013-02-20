@@ -8,5 +8,6 @@ describe User do
     it { should have_db_column(:crypted_password) }
     it { should have_db_column(:password_salt) }
     it { should have_db_column(:perishable_token) }
+    it { should have_db_column(:persistence_token) }
   end
 end
