@@ -7,6 +7,7 @@ gem 'sendgrid',    '~> 1.1.0'
 gem 'simple_form', '~> 2.0.4'
 gem 'authlogic',   '~> 3.2.0'
 gem 'cancan',      '~> 1.6.9'
+gem 'thin',        '~> 1.5.0'
 
 group :assets do
   gem 'sass-rails',     '~> 3.2.3'

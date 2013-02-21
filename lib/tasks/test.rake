@@ -1,26 +1,28 @@
 task :test
 
 namespace 'test' do
+  INTEGRATION_FILES = "#{Dir.pwd}/spec/integrations/**/*_spec.rb"
+  RECORD_FILES      = "#{Dir.pwd}/spec/records/*_spec.rb"
+  UNIT_FILES        = "#{Dir.pwd}/spec/models/**/*_spec.rb"
 
-  desc 'integration tests'
+  desc 'integration specs'
   task :integration do
-    test_files = Dir.glob("spec/integrations/**/*_spec.rb").each do |test_file|
-      sh "ruby #{test_file}"
-    end
+    sh "rspec #{INTEGRATION_FILES}"
   end
 
-  desc 'data structure tests'
-  task :data do
-    test_files = Dir.glob("spec/data/*_spec.rb").each do |test_file|
-      sh "ruby #{test_file}"
-    end
+  desc 'records structure specs'
+  task :records do
+    sh "rspec #{RECORD_FILES}"
   end
 
-  desc 'unit tests'
+  desc 'slow ass specs'
+  task :slow do
+    sh "rspec #{INTEGRATION_FILES} #{RECORD_FILES}"
+  end
+
+  desc 'unit specs'
   task :unit do
-    test_files = Dir.glob("spec/models/*_spec.rb").each do |test_file|
-      sh "ruby #{test_file}"
-    end
+    sh "rspec #{UNIT_FILES}"
   end
 end
 
