@@ -19,8 +19,8 @@ namespace 'deploy' do
     sh "heroku run rake db:migrate --remote production"
   end
 
-  desc "Print deployment instructions"
-  task :instructions do
+  desc "Print deployment prepare"
+  task prepare: [:test] do
     p '(1)  Ensure git status is clean'
     p '(2)  git push'
     p '(3)  NOT YET: rake staging'
@@ -30,7 +30,4 @@ namespace 'deploy' do
     p '(7)  git branch -d <old branch>'
     p '(8)  git checkout -b <new branch>'
   end
-
-  desc "Prepare for deployment"
-  task prep: [:test, :accessibility, :instructions]
 end
