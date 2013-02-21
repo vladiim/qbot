@@ -1,10 +1,10 @@
-require_relative '../../spec_helper'
+# require_relative '../../spec_helper'
 
-describe 'Create survey' do
+# describe 'Create survey' do
 
-  it 'creates an empty survey' do
-  	signup
-  	page.should have_content 'New Survey'
-  	page.should have_content 'Add Question'
-  end
-end
+#   it 'creates an empty survey' do
+#   	signup
+#   	page.should have_content 'New Survey'
+#   	page.should have_content 'Add Question'
+#   end
+# end

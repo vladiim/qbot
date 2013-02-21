@@ -42,4 +42,5 @@ group :development, :test do
   gem 'guard-jasmine',       '~> 1.13.0'
   gem 'sinon-rails',         '~> 1.4.2.1'
   gem 'jasmine-sinon-rails', '~> 1.3.4'
+  gem 'capybara',            '~> 2.0.2'
 end

@@ -6,7 +6,7 @@ namespace 'test' do
   UNIT_FILES        = "#{Dir.pwd}/spec/models/**/*_spec.rb"
 
   desc 'integration specs'
-  task :integration do
+  task :integrations do
     sh "rspec #{INTEGRATION_FILES}"
   end
 

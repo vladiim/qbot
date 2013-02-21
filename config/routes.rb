@@ -3,5 +3,5 @@ Qbot::Application.routes.draw do
   resources :surveys
   resources :user_sessions
 
-  root to: 'users#new'
+  root to: 'pages#home'
 end
