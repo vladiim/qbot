@@ -273,6 +273,6 @@ DEPENDENCIES
   shoulda (~> 3.3.2)
   simple_form (~> 2.0.4)
   sinon-rails (~> 1.4.2.1)
-  thin
+  thin (~> 1.5.0)
   turn
   uglifier (>= 1.0.3)
