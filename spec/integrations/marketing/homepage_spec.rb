@@ -8,7 +8,7 @@ describe 'Marketing Homepage', :focus => true do
   end
 
   it 'has the right nav' do
-    within('.nav') do
+    within('.navbar') do
       page.should have_content 'Register'
       page.should have_content 'Demo'
     end
